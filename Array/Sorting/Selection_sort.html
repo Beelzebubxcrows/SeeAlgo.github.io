@@ -1,0 +1,448 @@
+<html>
+
+
+    <head>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet">
+    </head>
+    <div class="navbar">
+
+        <a href="..\Array_landing.html">Array</a>
+        <a href="">Stack</a>
+        <a href="">Linked List</a>
+        <a href=""> Tree</a>
+    
+    
+    </div>
+   
+   <p>Input the length of Array(Less than 21)</p>
+    <p>
+    
+    <input id="length">
+    
+    </p>
+    
+    
+    <p>INPUT THE ELEMENTS SEPARATED WITH A SPACE</p>
+    <p>
+    
+    <input id="arrayelements">
+    
+    
+    </p>
+   
+    <p>
+    <button onclick="formarray()" class="btn btn-primary">Form Array</button>
+    <button onclick="randomarray()" class="btn btn-primary">A big random array</button>
+    </p>
+    
+    <p>
+    <button onclick="selection()" class="btn btn-primary">Selection Sort</button>
+      
+    
+    </p>
+    
+    <p>
+    <button onclick="restart()" class="btn btn-primary">Restart APP</button>
+    
+    </p>
+    
+  
+    <hr>
+    <div id="main">
+    
+    <div id="bar0" class="bars"></div>
+    <div id="bar1"class="bars"></div>
+    <div id="bar2"class="bars"></div>
+    <div id="bar3" class="bars"></div>
+    <div id="bar4"class="bars"></div>
+    <div id="bar5"class="bars"></div>
+    <div id="bar6"class="bars"></div>
+    <div id="bar7"class="bars"></div>
+    <div id="bar8" class="bars"></div>
+    <div id="bar9" class="bars"></div>
+    <div id="bar10" class="bars"></div>
+    <div id="bar11" class="bars"></div>
+    <div id="bar12" class="bars"></div>
+    <div id="bar13" class="bars"></div>
+    <div id="bar14" class="bars"></div>
+    <div id="bar15" class="bars"></div>
+    <div id="bar16" class="bars"></div>
+    <div id="bar17" class="bars"></div>
+    <div id="bar18" class="bars"></div>
+    <div id="bar19" class="bars"></div>
+        
+    
+    <div id="bar20" class="bars"></div>
+    <div id="bar21"class="bars"></div>
+    <div id="bar22"class="bars"></div>
+    <div id="bar23" class="bars"></div>
+    <div id="bar24"class="bars"></div>
+    <div id="bar25"class="bars"></div>
+    <div id="bar26"class="bars"></div>
+    <div id="bar27"class="bars"></div>
+    <div id="bar28" class="bars"></div>
+    <div id="bar29" class="bars"></div>
+    <div id="bar30" class="bars"></div>
+    <div id="bar31" class="bars"></div>
+    <div id="bar32" class="bars"></div>
+    <div id="bar33" class="bars"></div>
+    <div id="bar34" class="bars"></div>
+    <div id="bar35" class="bars"></div>
+    <div id="bar36" class="bars"></div>
+    <div id="bar37" class="bars"></div>
+    <div id="bar38" class="bars"></div>
+    <div id="bar39" class="bars"></div>
+        
+    
+    <div id="bar40" class="bars"></div>
+    <div id="bar41"class="bars"></div>
+    <div id="bar42"class="bars"></div>
+    <div id="bar43" class="bars"></div>
+    <div id="bar44"class="bars"></div>
+    <div id="bar45"class="bars"></div>
+    <div id="bar46"class="bars"></div>
+    <div id="bar47"class="bars"></div>
+    <div id="bar48" class="bars"></div>
+    <div id="bar49" class="bars"></div>    
+        
+    
+    <div id="bar50" class="bars"></div>
+    <div id="bar51"class="bars"></div>
+    <div id="bar52"class="bars"></div>
+    <div id="bar53" class="bars"></div>
+    <div id="bar54"class="bars"></div>
+    <div id="bar55"class="bars"></div>
+    <div id="bar56"class="bars"></div>
+    <div id="bar57"class="bars"></div>
+    <div id="bar58" class="bars"></div>
+    <div id="bar59" class="bars"></div>
+        
+        
+    <div id="bar60" class="bars"></div>
+    <div id="bar61"class="bars"></div>
+    <div id="bar62"class="bars"></div>
+    <div id="bar63" class="bars"></div>
+    <div id="bar64"class="bars"></div>
+    <div id="bar65"class="bars"></div>
+    <div id="bar66"class="bars"></div>
+    <div id="bar67"class="bars"></div>
+    <div id="bar68" class="bars"></div>
+    <div id="bar69" class="bars"></div>
+        
+        
+        
+    <div id="bar70" class="bars"></div>
+    <div id="bar71"class="bars"></div>
+    <div id="bar72"class="bars"></div>
+    <div id="bar73" class="bars"></div>
+    <div id="bar74"class="bars"></div>
+    <div id="bar75"class="bars"></div>
+    <div id="bar76"class="bars"></div>
+    <div id="bar77"class="bars"></div>
+    <div id="bar78" class="bars"></div>
+    <div id="bar79" class="bars"></div>
+    
+    
+    </div>
+    
+
+    
+   
+    <div class="bg-modal" id='instructions'>
+
+        <table>
+    
+    
+    
+            <tr>
+                
+            <td>
+                
+                 <div class="container" id='card'>
+                             <p id='makeheading'>INSTRUCTIONS</p>
+
+                             <br><br>
+                             <p id='subheading'>Selection Sort</p>
+                             <p id='content'>Selection sort is a famous sorting Algorithm.<br>As depicted by it's name.<br> It selects the smallest or largest element for the particular position<br>
+                            
+                            <br>Worst - case Complexity : O(n2)<br>
+                                Average - case Complexity : O(n2)<br>
+                                Best - case Complexity : O(n2)<br>
+                            
+                            </p>
+                            
+                            <p style="margin-top: 2cm;">           
+                                <button onclick="previousslide()" class='btn btn-danger'>Previous</button>
+                            
+                       <button onclick="nextslide()" class='btn btn-danger'>Next</button>
+              </p>
+                 
+            
+            </div>
+                
+                </td>    
+            </tr>
+            
+            
+            
+            </table>
+
+
+
+    </div>
+    
+ 
+    
+    
+    
+</html>
+
+<style>
+        table{
+        margin: auto;
+    }
+    #subheading{
+        font-size: 30px; font-weight: bolder;font-family:Arial, Helvetica, sans-serif;
+    }
+ #card{
+    margin:30px;
+        width: 15cm;
+        height: 15cm;
+        border-radius: 10px;
+        background-color: white;
+        padding: 8px;
+        padding-top: 50px;
+        
+        
+    }
+
+.bg-modal{
+    width:100%;
+    height: 100%;
+    background-color : black;
+    opacity: 0.9;
+    position:absolute;
+    top:0;
+    display: flex;
+}
+#makeheading{font-size: 40px; font-weight: bolder;font-family: 'Piedra', cursive;
+    }
+hr{
+margin-bottom:0;
+    
+}
+   .bars{
+        height:0%;
+        width: 10px;
+        background-color: black;
+        float: left;
+       margin-right:3px;
+    }
+    
+p{
+text-align: center;
+}
+   
+</style>
+
+<script>
+
+
+
+
+var slidecounter=0;
+
+function nextslide(){
+    if(slidecounter+1 <4)
+    slidecounter=slidecounter+1;
+    
+    changeslide();
+}
+function previousslide()
+{   if(slidecounter-1 >=0)
+    slidecounter=slidecounter-1;
+    changeslide();
+}
+
+
+
+function changeslide()
+{   
+    if(slidecounter==1) 
+    {document.getElementById('subheading').innerHTML='Step One : Form an Array';
+    document.getElementById('content').innerHTML='<br>You can make an array in following two ways.<br> Way 1: You could generate a random big array by clicking on button which says "Form a big Array"<br> Way 2: You could enter the length of the array and input the elements separated by a space <br> Then click on  "Form Array" to form the array';
+    
+    }
+    else if(slidecounter==2)
+    {
+        document.getElementById('subheading').innerHTML='Step Two : Selection Sort';
+    document.getElementById('content').innerHTML='<br> Click on the button "Selection Sort" to see the array getting sorted.<br>Prepare to be amazed<br>';
+       
+    }
+    else if(slidecounter==3)
+    {
+        document.getElementById('instructions').style.display='none';
+        
+        
+        
+    }
+    else if(slidecounter==0)
+    {
+      
+        document.getElementById('subheading').innerHTML='Bubble Sort';
+    document.getElementById('content').innerHTML='Selection sort is a famous sorting Algorithm.<br>As depicted by it\'s name.<br>It selects the smallest or largest element for the particular position<br>Worst - case Complexity : O(n2)<br>Average - case Complexity : O(n2)<br>Best - case Complexity : O(n2)<br>';
+         
+    }
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var n=document.getElementById("length").value;
+var arr= new Array(n);
+    var a1=0;
+    
+function randomarray(){
+    
+    n=80;
+    arr= new Array(n);
+    for(var i=0;i<n;i++)
+        {
+            arr[i]=Math.floor((Math.random() * 100) + 1);
+        }
+    
+    displayarray();
+    }
+    
+    
+    
+function formarray()
+    {
+    var d=document.getElementById('arrayelements').value;
+        
+       
+        var s="";
+        d=d+" ";
+        var t=0;
+        for(var i=0;i<d.length;i++)
+            { 
+                if(d[i]==' ')
+               { console.log(s);
+                   arr[t]=parseInt(s);
+                    s="";
+                t++;
+               }else
+                s=s+d[i];
+            }
+        
+        displayarray();
+    }
+    
+   function selection()
+    {
+         for(var i=0;i<arr.length;i++)
+            {
+                setTimeout(displayarray,100*i);
+                setTimeout(selectionsort,100*i);
+                
+            }
+        
+    }
+    
+    function restart()
+    {
+        location.reload();
+    }
+    
+    function displayarray()
+    {   console.log("displaying");
+         for(var i=0;i<arr.length;i++)
+            {   
+                var f= document.getElementById("bar"+i);
+                f.style.height=arr[i]*2+"%";
+                var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+                 f.style.backgroundColor=randomColor;
+                if(arr[i]==0)
+                    {
+                        f.style.backgroundColor="red";
+                        f.style.height="1%";
+                    }
+                
+            }
+        
+    }
+  
+    function selectionsort()
+    {   
+     
+     let len = arr.length;
+    var i=a1;
+        let min = i;
+        for (let j = i + 1; j < len; j++) {
+            if (arr[min] > arr[j]) {
+                min = j;
+            }
+        }
+        if (min !== i) {
+            let tmp = arr[i];
+            arr[i] = arr[min];
+            arr[min] = tmp;
+        }
+    a1++;
+        console.log(arr+" "+a1);
+    }
+    
+   
+    
+  
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+</script>

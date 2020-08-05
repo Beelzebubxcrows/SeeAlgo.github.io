@@ -1,0 +1,336 @@
+<html>
+<head>
+    
+    
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Piedra&display=swap" rel="stylesheet"> 
+
+</head>
+
+    
+<body>
+
+
+
+
+    <div class="bg-modal" id='instructions'>
+
+        <table>
+    
+    
+    
+            <tr>
+                
+            <td>
+                
+                 <div class="container" id='card'>
+                             <p id='makeheading'>INSTRUCTIONS</p>
+
+                             <br><br>
+                             <p id='subheading'>Binary Search</p>
+                             <p id='content'>
+                                Binary Search is a famous searching algorithm.<br>It uses Divide and Conquer to search the elements.<br>The Array should be <b>sorted</b>.<br><br>Worst - Case Complexity : O(log n)<br>Average - Case Complexity : O( log n)<br>Best - case Complexity :O(1)<br>                            </p>
+                            
+                            <p style="margin-top: 2cm;">           
+                                <button onclick="previousslide()" class='btn btn-danger'>Previous</button>
+                            
+                       <button onclick="nextslide()" class='btn btn-danger'>Next</button>
+              </p>
+                 
+            
+            </div>
+                
+                </td>    
+            </tr>
+            
+            
+            
+            </table>
+
+
+
+    </div>
+
+
+
+
+
+
+    <div class="navbar">
+
+        <a href="..\Array_landing.html">Array/</a>
+        <a href="..\..\Stack\stack.html">Stack/</a>
+        <a href="">Linked List/</a>
+        <a href=""> Tree</a>
+    
+    
+    </div>
+
+    <div id='logo'>
+        Binary Search
+    </div>    
+<table >
+    <tr >
+        <td >
+            <input placeholder="Elements of the Array(Sorted Elements)" type="text" id='elements'>
+            
+             </td>
+        <td >
+            <input placeholder="Element to be Searched" id='search_element'>
+           
+        </td>
+    </tr>
+    <tr >
+        <td ><button onclick="formarray()" class="btn btn-primary"> Form the Array</button></td>
+        <td > <button onclick="searchelement()" class="btn btn-primary"> Search</button></td>
+    </tr>
+    
+
+</table>
+
+<p id="message"></p>
+<hr>
+<div style="margin-left:25% ;">
+    <table>
+        <tr >
+            <td id='0'></td>
+            <td id='1' ></td>
+            <td id='2'></td>
+            <td id='3'></td>
+            <td id='4'></td>
+            <td id='5'></td>
+            <td id='6'></td>
+            <td id='7'></td>
+            <td id='8'></td>
+            <td id='9'></td>
+            <td id='10'></td>
+            <td id='11'></td>
+            <td id='12'></td>
+            <td id='13'></td>
+            <td id='14'></td>
+            <td id='15'></td>
+            <td id='16'></td>
+            <td id='17'></td>
+            <td id='18'></td>
+            <td id='19'></td>
+            
+        </tr>
+    </table>
+    </div>
+
+
+
+
+</body>
+</html>
+
+<style>
+p{
+    text-align: center;
+}
+table{
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+td,tr{
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px ;
+    padding-bottom:10px;
+   
+}
+#logo{
+        font-size: 45px;
+        font-weight: bolder;
+        font-family: 'Piedra', cursive;
+        color:rgb(4, 36, 61);
+        text-align: center;
+
+    }
+    #message{
+        font-size: 30px;
+        font-weight: bolder;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:rgb(4, 36, 61);
+        margin: 30px;
+    }
+    .bg-modal{
+    width:100%;
+    height: 100%;
+    background-color : black;
+    opacity: 0.9;
+    position:absolute;
+    top:0;
+    display: flex;
+}
+#subheading{
+        font-size: 30px; font-weight: bolder;font-family:Arial, Helvetica, sans-serif;
+    }
+    
+#makeheading{font-size: 40px; font-weight: bolder;font-family: 'Piedra', cursive;
+    }
+ #card{
+    margin:30px;
+        width: 15cm;
+        height: 15cm;
+        border-radius: 10px;
+        background-color: white;
+        padding: 8px;
+        padding-top: 50px;
+        
+        
+    }
+</style>
+
+
+<script>
+
+var arr = new Array(0);
+
+function formarray(){
+arr='';
+arr = document.getElementById('elements').value.trim();
+arr=arr.split(' ');
+
+for(var i=0;i<arr.length;i++)
+{
+    document.getElementById(i).innerHTML=arr[i];
+    document.getElementById(i).style.border='2px black solid';
+    
+    document.getElementById(i).style.backgroundColor='white';
+    
+}
+for(var i=arr.length;i<=20;i++)
+{
+    
+    document.getElementById(i).innerHTML='';
+    document.getElementById(i).style.border='';
+    
+    document.getElementById(i).style.backgroundColor='white';
+}
+console.log(arr);
+
+
+}
+
+function searchelement()
+{
+    
+    for(var  i=0;i<arr.length;i++)
+    {
+     document.getElementById(i).style.backgroundColor='white';
+    }
+    
+ var element = document.getElementById('search_element').value;
+ var l=0;
+ var u=arr.length-1;
+var f=0;
+ while(l<=u)
+ {
+     var m=Math.floor((l+u)/2);
+     var lapse=0;
+     
+    if(element<arr[m])
+     {
+         u=m-1;
+   document.getElementById(m).style.backgroundColor='red';
+     }
+     else if(element>arr[m])
+     {
+         l=m+1;
+       document.getElementById(m).style.backgroundColor='red';
+     }
+     else{
+         document.getElementById(m).style.backgroundColor='green';
+         document.getElementById('message').innerHTML='Element found at '+(m);
+         console.log('element found');
+         f=1;
+         break;
+     }
+     console.log('m');
+     
+ }
+ if(f==0)
+ 
+ document.getElementById('message').innerHTML='Element not found';
+
+}
+
+function binary_search()
+{
+
+
+
+    
+}
+
+
+
+
+
+
+var slidecounter=0;
+
+function nextslide(){
+    if(slidecounter+1 <4)
+    slidecounter=slidecounter+1;
+    
+    changeslide();
+}
+function previousslide()
+{   if(slidecounter-1 >=0)
+    slidecounter=slidecounter-1;
+    changeslide();
+}
+
+
+
+function changeslide()
+{   
+    if(slidecounter==1) 
+    {document.getElementById('subheading').innerHTML='Step One : Form an Array';
+    document.getElementById('content').innerHTML='<br> Enter the elements of the Array separated by a space.<br>Click on Form Array button to form the array<br> ';
+    
+    }
+    else if(slidecounter==2)
+    {
+        document.getElementById('subheading').innerHTML='Step Two : Apply Binary Search';
+    document.getElementById('content').innerHTML='<br>Enter the element to be searched.<br><br> Click on the button "Search" to search the element<br><br><br> <b>COLOR SCHEME</b><br> Red : Element not there at the position. <br> Green: Element Found at the position.';
+       
+    }
+    else if(slidecounter==3)
+    {
+        document.getElementById('instructions').style.display='none';
+        
+        
+        
+    }
+    else if(slidecounter==0)
+    {
+      
+        document.getElementById('subheading').innerHTML='Linear Search';
+    document.getElementById('content').innerHTML='Binary Search is a famous searching algorithm.<br>It uses Divide and Conquer to search the elements.<br><br><br>Worst - Case Complexity : O(log n)<br>Average - Case Complexity : O( log n)<br>Best - case Complexity :O(1)<br>';
+         
+    }
+ 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
